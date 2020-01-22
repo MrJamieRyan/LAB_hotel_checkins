@@ -25,5 +25,21 @@ methods: {handleDelete(id){
 </script>
 
 <style>
+.bookingItem{
+    background-color: #FFE8D1;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border: solid thin #68C3D4;
+    font-family: 'PT Sans Caption', sans-serif;
 
+}
+
+h2{
+    color: #568EA3
+}
+
+p{
+    color: #826251
+}
 </style>

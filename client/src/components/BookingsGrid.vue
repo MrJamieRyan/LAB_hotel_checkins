@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id='bookingsGrid'>
       <booking-item v-for="(booking, id) in bookings" :key="booking._id" :bookingItem="booking"/>
   </div>
 </template>
@@ -41,5 +41,13 @@ components: {
 </script>
 
 <style>
+
+#bookingsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: white
+    
+}
 
 </style>

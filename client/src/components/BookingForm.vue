@@ -5,18 +5,21 @@
       <label for="name">Name:</label>
       <input type="text" id="name" v-model="name" />
     </div>
+    <br>
     <div class="formWrap">
       <label for="email">Email:</label>
       <input type="text" id="email" v-model="email" />
     </div>
+    <br>
     <div class="formWrap">
       <select v-model="status">
-        <option value="booked">Booked</option>
+        <option value="booked" selected>Booked</option>
         <option value="checked-in">Checked In</option>
         <option value="checked-out">Checked Out</option>
         <option value="cancelled">Cancelled</option>
       </select>
     </div>
+    <br>
     <button>Submit</button>
   </form>
 </template>
@@ -30,7 +33,7 @@ export default {
         return {
             name: "",
             email: "",
-            status: ""
+            status: "booked"
         }
     },
     methods: {
@@ -53,4 +56,12 @@ export default {
 </script>
 
 <style>
+#booking-form{
+    background-color: #FFE8D1;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border: solid thin #68C3D4;
+    font-family: 'PT Sans Caption', sans-serif;
+}
 </style>
