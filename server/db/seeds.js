@@ -1,4 +1,4 @@
-use bookings;
+use hotel_bookings;
 db.dropDatabase();
 
 db.bookings.insertMany([
@@ -22,5 +22,4 @@ db.bookings.insertMany([
         email: "bob@codeclan.com",
         status: "Cancelled"
     }
-
 ])
