@@ -23,6 +23,7 @@
 
 <script>
 import BookingService from '../../services/BookingService';
+import {eventBus} from '../main'
 export default {
     name:"booking-form",
     data(){

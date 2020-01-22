@@ -7,6 +7,7 @@
 <script>
 import BookingService from '../../services/BookingService'
 import BookingItem from './BookingItem'
+import { eventBus } from '../main'
 export default {
 "name": "bookings-grid",
 data () {
@@ -16,6 +17,13 @@ return {
 },
 mounted(){
     this.fetchData();
+    eventBus.$on('booking-added', bookingItem => this.bookings.push(bookingItem));
+
+eventBus.$on('booking-deleted', id => {
+    const index = this.bookings.findIndex(booking => booking._id === id);
+    this.bookings.splice(index, 1)
+})
+
 },
 methods: {
     fetchData(){
